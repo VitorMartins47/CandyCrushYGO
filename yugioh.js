@@ -4,6 +4,9 @@ var board = [];
 var rows = 9;
 var columns = 9;
 var score = 0;
+var blup = new Audio('./sounds/blup.wav');
+var wosh = new Audio('./sounds/wosh.wav')
+
 
 var currTile;
 var otherTile;
@@ -130,6 +133,7 @@ function crushThree() {
                 candy2.src = "./images/blank.png";
                 candy3.src = "./images/blank.png";
                 score += 30;
+                blup.play();
             }
         }
     }
@@ -145,6 +149,7 @@ function crushThree() {
                 candy2.src = "./images/blank.png";
                 candy3.src = "./images/blank.png";
                 score += 30;
+                blup.play();
             }
         }
     }
@@ -191,6 +196,7 @@ function slideCandy() {
 
         for (let r = ind; r >= 0; r--) {
             board[r][c].src = "./images/blank.png";
+            wosh.play()
         }
     }
 }
