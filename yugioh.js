@@ -13,9 +13,8 @@ var otherTile;
 
 
 window.onload = function() {
-    startGame();
     song.play();
-    
+    startGame();
 
     //1/10th of a second
     window.setInterval(function(){
@@ -30,6 +29,7 @@ function randomCandy() {
 }
 
 function startGame() {
+    
     for (let r = 0; r < rows; r++) {
         let row = [];
         for (let c = 0; c < columns; c++) {
@@ -48,6 +48,7 @@ function startGame() {
 
             document.getElementById("board").append(tile);
             row.push(tile);
+        
         }
         board.push(row);
     }
@@ -116,6 +117,8 @@ function dragEnd() {
 }
 
 function crushCandy() {
+    //crushFive();
+    //crushFour();
     crushThree();
     document.getElementById("score").innerText = score;
 
@@ -208,3 +211,4 @@ function generateCandy() {
         }
     }
 }
+
