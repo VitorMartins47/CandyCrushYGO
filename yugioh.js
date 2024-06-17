@@ -6,7 +6,7 @@ var columns = 9;
 var score = 0;
 var blup = new Audio('./sounds/blup.wav');
 var wosh = new Audio('./sounds/wosh.wav')
-
+var song = new Audio('./sounds/BattleTheme.wav')
 
 var currTile;
 var otherTile;
@@ -14,6 +14,8 @@ var otherTile;
 
 window.onload = function() {
     startGame();
+    song.play();
+    
 
     //1/10th of a second
     window.setInterval(function(){
@@ -114,8 +116,6 @@ function dragEnd() {
 }
 
 function crushCandy() {
-    //crushFive();
-    //crushFour();
     crushThree();
     document.getElementById("score").innerText = score;
 
